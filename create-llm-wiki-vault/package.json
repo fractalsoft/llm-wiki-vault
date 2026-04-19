@@ -1,0 +1,25 @@
+{
+  "name": "create-llm-wiki-vault",
+  "version": "1.0.0",
+  "description": "Scaffold a Cursor LLM Wiki (Phase A) vault — .raw/, wiki/, .cursor rules and skills.",
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "obsidian",
+    "llm",
+    "wiki",
+    "karpathy",
+    "scaffold",
+    "create-project"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "create-llm-wiki-vault": "./bin/create-llm-wiki-vault.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ]
+}
