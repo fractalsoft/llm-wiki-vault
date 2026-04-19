@@ -67,3 +67,10 @@ Orientation and vault structure: skill `wiki`.
 
 - **Agents** — [`AGENTS.md`](AGENTS.md) (bootstrap, skill index, Phase B note).
 - **Pattern** — [Karpathy LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+
+## TODOS:
+- add npx support to create new wikis.
+- add claude support
+- different source ingests
+- add integration gateways
+- add custom AI harness
