@@ -28,6 +28,18 @@ A **Karpathy-style LLM Wiki** in a folder: you keep **immutable sources** in `.r
 - [Cursor](https://cursor.com/) with this folder opened as the project.
 - Optional: Obsidian pointing at this folder if you want local graph and reading features.
 
+## Scaffold a new vault
+
+From any directory:
+
+```bash
+npx create-llm-wiki-vault@latest [directory]
+```
+
+Omit `directory` to create `./llm-wiki-vault`. The generator refuses non-empty targets and writes `.llm-wiki-template-version` with the template semver.
+
+Package source in this repo: [`create-llm-wiki-vault/`](create-llm-wiki-vault/).
+
 ## Repository layout
 
 | Path | Purpose |
@@ -67,3 +79,10 @@ Orientation and vault structure: skill `wiki`.
 
 - **Agents** — [`AGENTS.md`](AGENTS.md) (bootstrap, skill index, Phase B note).
 - **Pattern** — [Karpathy LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+
+## Roadmap / ideas
+
+- Claude / other agent entrypoints alongside Cursor
+- Richer source ingests (URLs, video transcripts)
+- Integration gateways
+- Custom AI harness
