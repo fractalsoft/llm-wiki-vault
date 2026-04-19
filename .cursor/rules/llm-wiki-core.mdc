@@ -1,0 +1,25 @@
+---
+description: Core invariants for the LLM Wiki — immutable raw sources, manifest, hot cache, and safety.
+alwaysApply: true
+---
+
+# LLM Wiki — core invariants
+
+## Layers
+
+- **`.raw/`** — Immutable source captures. Add **new** files when ingesting; do **not** edit or rewrite existing `.raw/` files unless the user explicitly requests a correction to a specific file (treat as exceptional).
+- **`wiki/`** — Agent-maintained summaries, concept pages, and cross-links. Prefer updating the wiki over editing sources.
+- **`.raw/.manifest.json`** — Tracks ingested sources (ids, optional URL, date, paths). Update when new material enters `.raw/` or when ingest completes.
+
+## Session handoff
+
+- At the start of substantive wiki work, read **`wiki/hot.md`** if it exists (recent context, open threads).
+- After large ingest or query sessions, update **`wiki/hot.md`** with brief, durable notes: what changed, what to do next, links to key `wiki/` pages.
+
+## Traceability
+
+- Wiki pages that summarize or quote sources must **link** to the corresponding file under `.raw/` (wikilink or path) so answers stay grounded.
+
+## Safety
+
+- Do not place API keys, passwords, tokens, or regulated/sensitive data in `wiki/` or committed `.raw/` content. Prefer private repos and team policy for confidential material.
