@@ -85,4 +85,5 @@ Orientation and vault structure: skill `wiki`.
 - Claude / other agent entrypoints alongside Cursor
 - Richer source ingests (URLs, video transcripts)
 - Integration gateways
+- Add vector databases and embedding pipelines 
 - Custom AI harness
